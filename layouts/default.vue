@@ -13,7 +13,7 @@
             leave-active-class="transition duration-100"
             mode="out-in"
           >
-            <div v-if="$colorMode.value == 'dark'">
+            <div v-if="$colorMode.value === 'dark'">
               <Icon
                 name="material-symbols:light-mode"
                 size="32"
@@ -37,6 +37,9 @@
 
 <script>
 export default {
+  created() {
+    this.$colorMode.preference = "light";
+  },
   methods: {
     log(msg) {
       console.log(msg);
