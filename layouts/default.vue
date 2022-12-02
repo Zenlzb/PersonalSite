@@ -13,7 +13,7 @@
             leave-active-class="transition duration-100"
             mode="out-in"
           >
-            <div v-if="$colorMode.value === 'dark'">
+            <div v-if="$colorMode.value == 'dark'">
               <Icon
                 name="material-symbols:light-mode"
                 size="32"
@@ -42,10 +42,16 @@ export default {
       console.log(msg);
     },
     toggleDark() {
-      if (this.$colorMode.value === "dark") {
-        this.$colorMode.value = "light";
-      } else {
-        this.$colorMode.value = "dark";
+      if (this.$colorMode.preference === "system") {
+        if (this.$colorMode.value === "dark") {
+          this.$colorMode.preference = "light";
+        } else {
+          this.$colorMode.preference = "dark";
+        }
+      } else if (this.$colorMode.preference === "dark") {
+        this.$colorMode.preference = "light";
+      } else if (this.$colorMode.preference === "light") {
+        this.$colorMode.preference = "dark";
       }
     },
   },
