@@ -3,7 +3,7 @@
     <div class="flex flex-wrap justify-center">
       <div class="px-4">
         <img
-          src="https://i.imgur.com/iaVoxEQ.png"
+          src="../public/picture.png"
           alt="..."
           class="shadow-xl rounded-full max-w-full h-auto align-middle border-white border-4"
         />
