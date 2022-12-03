@@ -13,7 +13,6 @@ module.exports = {
             opacity: 0
           },
           '100%': {
-            transform: 'translateY(0%);',
             opacity: 1
           }
         }
@@ -22,6 +21,9 @@ module.exports = {
         fadeDown: 'fadeDown 1s ease-in 1'
       }
     },
+    fontFamily: {
+      Nunito: ['Nunito Sans, sans-serif']
+    }
   },
   plugins: [],
 }
