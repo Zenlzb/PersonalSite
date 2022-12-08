@@ -27,9 +27,7 @@
   >
     <div v-for="social of socials">
       <a :href="social.link">
-        <button
-          class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 hover:cursor-pointer p-1"
-        >
+        <button class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 p-1">
           <Icon
             :name="social.icon"
             size="32"

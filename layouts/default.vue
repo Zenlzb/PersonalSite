@@ -1,7 +1,7 @@
 <template>
   <header class="p-2 pr-10 pt-5 justify-end flex-row flex">
     <button
-      class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 hover:cursor-pointer p-1"
+      class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 p-1"
       @click="toggleDark"
     >
       <transition
