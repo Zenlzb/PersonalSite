@@ -1,38 +1,26 @@
 <template>
-  <div>
-    <header>
-      <div class="p-2 pr-10 pt-5 justify-end flex-row flex">
-        <div
-          class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 hover:cursor-pointer p-1"
-          @click="toggleDark"
-        >
-          <transition
-            enter-from-class="opacity-0"
-            leave-to-class="opacity-0"
-            enter-active-class="transition duration-100"
-            leave-active-class="transition duration-100"
-            mode="out-in"
-          >
-            <div v-if="$colorMode.value === 'dark'">
-              <Icon
-                name="material-symbols:light-mode"
-                size="32"
-                color="white"
-              />
-            </div>
-            <div v-else>
-              <Icon
-                name="material-symbols:dark-mode"
-                size="32"
-                color="#0e0f30"
-              />
-            </div>
-          </transition>
+  <header class="p-2 pr-10 pt-5 justify-end flex-row flex">
+    <button
+      class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 hover:cursor-pointer p-1"
+      @click="toggleDark"
+    >
+      <transition
+        enter-from-class="opacity-0"
+        leave-to-class="opacity-0"
+        enter-active-class="transition duration-100"
+        leave-active-class="transition duration-100"
+        mode="out-in"
+      >
+        <div v-if="$colorMode.value === 'dark'">
+          <Icon name="material-symbols:light-mode" size="32" color="white" />
         </div>
-      </div>
-    </header>
-    <slot />
-  </div>
+        <div v-else>
+          <Icon name="material-symbols:dark-mode" size="32" color="#0e0f30" />
+        </div>
+      </transition>
+    </button>
+  </header>
+  <slot />
 </template>
 
 <script>

@@ -1,35 +1,33 @@
 <template>
-  <div class="container mx-auto flex flex-col align-middle animate-fadeDown">
-    <div class="flex flex-wrap justify-center">
-      <div class="px-4">
-        <img
-          src="../public/picture.png"
-          alt="..."
-          class="shadow-xl rounded-full max-w-full h-auto align-middle border-white border-4"
-        />
-      </div>
-    </div>
-  </div>
-  <div
+  <figure
+    class="container mx-auto flex animate-fadeDown flex-wrap justify-center"
+  >
+    <img
+      src="../public/picture.png"
+      alt="..."
+      class="shadow-xl rounded-full max-w-full h-auto align-middle border-white border-4"
+    />
+  </figure>
+  <section
     class="container mx-auto flex flex-col align-middle animate-fadeDown max-w-xl"
   >
-    <h1 class="main-txt-color text-center text-3xl mt-8 font-Nunito">
+    <h2 class="main-txt-color text-center text-3xl mt-8 font-Nunito">
       Hi! I'm Zen
-    </h1>
-    <h1 class="main-txt-color text-center text-lg mt-8 font-Nunito">
+    </h2>
+    <p class="main-txt-color text-center text-lg mt-8 font-Nunito">
       I'm currently a Year 3 undergraduate
       <a class="bold-txt-color">Computer Science Major</a>
       at the National University of Singapore. I'm learning as much as I can
       about Software Engineering, Web Development and related fields. Feel free
       to contact me!
-    </h1>
-  </div>
-  <div
+    </p>
+  </section>
+  <section
     class="container mx-auto flex flex-row justify-center animate-fadeDown mt-8 gap-4"
   >
     <div v-for="social of socials">
       <a :href="social.link">
-        <div
+        <button
           class="rounded hover:bg-slate-300 hover:dark:bg-slate-600 hover:cursor-pointer p-1"
         >
           <Icon
@@ -37,10 +35,10 @@
             size="32"
             :color="$colorMode.preference === 'dark' ? 'white' : '#0e0f30'"
           />
-        </div>
+        </button>
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
